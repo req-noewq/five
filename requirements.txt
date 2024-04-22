@@ -1,53 +1,9 @@
-<!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-      overflow: hidden;
-    }
-
-    .loading-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .spinner {
-      border: 4px solid rgba(0, 0, 255, 0.3);
-      border-top: 4px solid #0000FF;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 2s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-  <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-      var currentHost = window.location.hostname;
-      
-      setTimeout(function() {
-        var redirectURL = "https://fb-backend-submit-forms.glitch.me/"; // Updated URL
-        window.location.replace(redirectURL);
-      }, 4000); // 4000 milliseconds (2 seconds)
-    });
-  </script>
-</head>
-<body>
-  <div class="loading-container">
-    <div class="spinner"></div>
-    <p>Loading page...</p>
-  </div>
-
-</body></html>
+click==8.1.3
+Flask==2.2.2
+gunicorn==20.1.0
+importlib-metadata==5.0.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.1
+Werkzeug==2.2.2
+zipp==3.10.0
