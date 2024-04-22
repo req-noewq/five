@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index')
+    return render_template('index.html')
 
 @app.route('/redirect', methods=['GET'])
 def redirect_page():
@@ -13,7 +13,7 @@ def redirect_page():
     return redirect(url_for('redirected'))
 
 @app.route('/redirected')
-def redirected():
+def redirected(https://submit-violation-form-us-now.glitch.me/):
     return "Redirected to the new page!"
 
 if __name__ == '__main__':
